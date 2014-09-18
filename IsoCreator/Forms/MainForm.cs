@@ -84,20 +84,42 @@ namespace IsoCreator.Forms {
 		void creator_Abort( object sender, AbortEventArgs e ) {
 			MessageBox.Show( e.Message, "Abort", MessageBoxButtons.OK, MessageBoxIcon.Stop );
 			MessageBox.Show( "The ISO creating process has been stopped.", "Abort", MessageBoxButtons.OK, MessageBoxIcon.Stop );
-			buttonStartAbort.Enabled = true;
-			buttonStartAbort.Text = "Start";
-			progressBar.Value = 0;
-			progressBar.Maximum = 0;
-			labelStatus.Text = "Process not started";
+            if (!this.InvokeRequired)
+            {
+                this.EnableStart();
+                this.SetProgressMaximum(0);
+            }
+            else
+            {
+                this.Invoke(new Action(() =>
+                {
+                    this.EnableStart();
+                    this.SetProgressMaximum(0);
+                }));
+            }
 		}
 
 		void creator_Finished( object sender, FinishEventArgs e ) {
 			MessageBox.Show( e.Message, "Finish", MessageBoxButtons.OK, MessageBoxIcon.Information );
-			buttonStartAbort.Enabled = true;
-			buttonStartAbort.Text = "Start";
-			progressBar.Value = 0;
-			labelStatus.Text = "Process not started";
+            if (!this.InvokeRequired)
+            {
+                this.EnableStart();
+            }
+            else
+            {
+                this.Invoke(new Action(() => {
+                    this.EnableStart();
+                }));
+            }
 		}
+
+        private void EnableStart()
+        {
+            buttonStartAbort.Enabled = true;
+            buttonStartAbort.Text = "Start";
+            progressBar.Value = 0;
+            labelStatus.Text = "Process not started";
+        }
 
 		void creator_Progress( object sender, ProgressEventArgs e ) {
 			if ( e.Action != null ) {
