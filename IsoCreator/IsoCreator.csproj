@@ -19,6 +19,7 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -73,6 +74,7 @@
     <Compile Include="IsoWrappers\PathTableRecordWrapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="app.config" />
     <None Include="Forms\MainForm.resx">
       <SubType>Designer</SubType>
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -114,8 +116,8 @@
     <Content Include="Resources\CDCat.ico" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Export\Export\Export.csproj">
-      <Project>{4A9EF7A9-C3D2-43D6-A2F6-9C97FB5AEEE3}</Project>
+    <ProjectReference Include="..\Export\Export\Export.csproj">
+      <Project>{4a9ef7a9-c3d2-43d6-a2f6-9c97fb5aeee3}</Project>
       <Name>Export</Name>
     </ProjectReference>
   </ItemGroup>
