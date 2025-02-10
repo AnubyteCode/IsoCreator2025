@@ -345,10 +345,12 @@ namespace IsoCreator.DirectoryTree {
 				UInt32 childSize = ( type == VolumeType.Primary ) ? child.Size1 : child.Size2;
 				string childName = ( type == VolumeType.Primary ) ? child.ShortName : child.LongName;
 
-				record = new DirectoryRecordWrapper( childExtent, childSize, child.Date, child.IsDirectory, childName );
-				record.VolumeDescriptorType = type;
+                record = new DirectoryRecordWrapper(childExtent, childSize, child.Date, child.IsDirectory, childName)
+                {
+                    VolumeDescriptorType = type
+                };
 
-				if ( record.Length + position > IsoAlgorithm.SectorSize ) {
+                if ( record.Length + position > IsoAlgorithm.SectorSize ) {
 					writer.Write( new byte[IsoAlgorithm.SectorSize-position] );
 					position = 0;
 				}

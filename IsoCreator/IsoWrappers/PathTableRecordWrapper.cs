@@ -214,10 +214,12 @@ namespace IsoCreator.IsoWrappers {
 
 		public int Write( BinaryWriter writer ) {
 			if ( m_record == null ) {
-				m_record = new PathTableRecord();
-				m_record.Length = 1;
-				m_record.Identifier = new byte[1] { 65 };
-			}
+                m_record = new PathTableRecord
+                {
+                    Length = 1,
+                    Identifier = new byte[1] { 65 }
+                };
+            }
 
 			writer.Write( m_record.Length );
 			writer.Write( m_record.ExtendedLength );

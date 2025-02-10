@@ -134,7 +134,7 @@ namespace IsoCreator.Forms {
 			this.buttonStartAbort.TabIndex = 17;
 			this.buttonStartAbort.Text = "Start";
 			this.buttonStartAbort.UseVisualStyleBackColor = true;
-			this.buttonStartAbort.Click += new System.EventHandler( this.buttonStartAbort_Click );
+			this.buttonStartAbort.Click += new System.EventHandler( this.ButtonStartAbort_Click );
 			// 
 			// treeView1
 			// 
@@ -259,7 +259,7 @@ namespace IsoCreator.Forms {
 			this.buttonBrowseIso.TabIndex = 5;
 			this.buttonBrowseIso.Text = "Browse...";
 			this.buttonBrowseIso.UseVisualStyleBackColor = true;
-			this.buttonBrowseIso.Click += new System.EventHandler( this.buttonBrowseIso_Click );
+			this.buttonBrowseIso.Click += new System.EventHandler( this.ButtonBrowseIso_Click );
 			// 
 			// textBoxVolumeName
 			// 

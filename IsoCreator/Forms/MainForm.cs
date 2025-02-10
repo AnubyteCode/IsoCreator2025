@@ -15,7 +15,7 @@ namespace IsoCreator.Forms {
 		#region Fields 
 
 		private Thread m_thread = null;
-		private IsoCreator m_creator = null;
+		private readonly IsoCreator m_creator = null;
 
 		#endregion
 
@@ -29,9 +29,9 @@ namespace IsoCreator.Forms {
 			textBoxVolumeName.Text = "BUNNY-WABBIT";
 			//
 			m_creator = new IsoCreator();
-			m_creator.Progress += new ProgressDelegate( creator_Progress );
-			m_creator.Finish += new FinishDelegate( creator_Finished );
-			m_creator.Abort += new AbortDelegate( creator_Abort );
+			m_creator.Progress += new ProgressDelegate( Creator_Progress );
+			m_creator.Finish += new FinishDelegate( Creator_Finished );
+			m_creator.Abort += new AbortDelegate( Creator_Abort );
 			//
 			this.Icon = Properties.Resources.CDCat;
 		}
@@ -64,7 +64,7 @@ namespace IsoCreator.Forms {
 
 		#region Event Handlers
 
-		private void buttonStartAbort_Click( object sender, EventArgs e ) {
+		private void ButtonStartAbort_Click( object sender, EventArgs e ) {
 			if ( m_thread == null || !m_thread.IsAlive ) {
 				if ( textBoxVolumeName.Text.Trim() != "" ) {
 					m_thread = new Thread( new ParameterizedThreadStart( m_creator.Folder2Iso ) );
@@ -81,7 +81,7 @@ namespace IsoCreator.Forms {
 			}
 		}
 
-		void creator_Abort( object sender, AbortEventArgs e ) {
+		void Creator_Abort( object sender, AbortEventArgs e ) {
 			MessageBox.Show( e.Message, "Abort", MessageBoxButtons.OK, MessageBoxIcon.Stop );
 			MessageBox.Show( "The ISO creating process has been stopped.", "Abort", MessageBoxButtons.OK, MessageBoxIcon.Stop );
             if (!this.InvokeRequired)
@@ -99,7 +99,7 @@ namespace IsoCreator.Forms {
             }
 		}
 
-		void creator_Finished( object sender, FinishEventArgs e ) {
+		void Creator_Finished( object sender, FinishEventArgs e ) {
 			MessageBox.Show( e.Message, "Finish", MessageBoxButtons.OK, MessageBoxIcon.Information );
             if (!this.InvokeRequired)
             {
@@ -121,7 +121,7 @@ namespace IsoCreator.Forms {
             labelStatus.Text = "Process not started";
         }
 
-		void creator_Progress( object sender, ProgressEventArgs e ) {
+		void Creator_Progress( object sender, ProgressEventArgs e ) {
 			if ( e.Action != null ) {
 				if ( !this.InvokeRequired ) {
 					this.SetLabelStatus( e.Action );
@@ -146,17 +146,19 @@ namespace IsoCreator.Forms {
 			}
 		}
 
-		private void buttonBrowseFolder_Click( object sender, EventArgs e ) {
+		private void ButtonBrowseFolder_Click( object sender, EventArgs e ) {
 			FolderBrowserDialog dialog = new FolderBrowserDialog();
 			if ( dialog.ShowDialog( this ) == DialogResult.OK ) {
 				textBoxFolder.Text = dialog.SelectedPath;
 			}
 		}
 
-		private void buttonBrowseIso_Click( object sender, EventArgs e ) {
-			SaveFileDialog dialog = new SaveFileDialog();
-			dialog.Filter = "CD Images (*.iso)|*.iso";
-			if ( dialog.ShowDialog( this ) == DialogResult.OK ) {
+		private void ButtonBrowseIso_Click( object sender, EventArgs e ) {
+            SaveFileDialog dialog = new SaveFileDialog
+            {
+                Filter = "CD Images (*.iso)|*.iso"
+            };
+            if ( dialog.ShowDialog( this ) == DialogResult.OK ) {
 				textBoxIsoPath.Text = dialog.FileName;
 			}
 		}

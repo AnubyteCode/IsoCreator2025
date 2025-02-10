@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle( "IsoCreator" )]
-[assembly: AssemblyDescription( "" )]
+[assembly: AssemblyTitle( "IsoCreator2025" )]
+[assembly: AssemblyDescription( "Creates .iso files..." )]
 [assembly: AssemblyConfiguration( "" )]
-[assembly: AssemblyCompany( "Epurasu Designs" )]
-[assembly: AssemblyProduct( "IsoCreator" )]
-[assembly: AssemblyCopyright( "Copyright © Epurasu Designs 2006" )]
+[assembly: AssemblyCompany( "" )]
+[assembly: AssemblyProduct( "IsoCreator2025" )]
+[assembly: AssemblyCopyright( "" )]
 [assembly: AssemblyTrademark( "" )]
 [assembly: AssemblyCulture( "" )]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible( false )]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid( "e66db702-0a2f-44a6-800b-7c0b92e9e5a8" )]
+[assembly: Guid( "e66db702-0a2f-44a6-f00d-7c0b92e9e5a8" )]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -29,5 +29,5 @@ using System.Runtime.InteropServices;
 //      Build Number
 //      Revision
 //
-[assembly: AssemblyVersion( "1.0.0.0" )]
-[assembly: AssemblyFileVersion( "1.0.0.0" )]
+[assembly: AssemblyVersion( "4.8.0.1" )]
+[assembly: AssemblyFileVersion( "4.8.0.1" )]

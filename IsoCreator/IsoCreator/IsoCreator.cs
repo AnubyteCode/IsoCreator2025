@@ -111,15 +111,16 @@ namespace IsoCreator {
 			}
 
 			DirectoryRecordWrapper rootDir = new DirectoryRecordWrapper( 19, IsoAlgorithm.SectorSize, DateTime.Now, true, "." );
-			VolumeDescriptorWrapper volumeDescriptor = new VolumeDescriptorWrapper( "EPURASU", 28, 26, 21, 22, rootDir, DateTime.Now, DateTime.Now.Subtract( TimeSpan.FromDays( 2 ) ), 8 );
+            VolumeDescriptorWrapper volumeDescriptor = new VolumeDescriptorWrapper("EPURASU", 28, 26, 21, 22, rootDir, DateTime.Now, DateTime.Now.Subtract(TimeSpan.FromDays(2)), 8)
+            {
+                //rootDir.SetDirectoryRecord( 19, ISO9660.SectorSize, DateTime.Now, true, "." );
 
-			//rootDir.SetDirectoryRecord( 19, ISO9660.SectorSize, DateTime.Now, true, "." );
+                // [ Sect 16 ] Primary volume descriptor
+                VolumeDescriptorType = VolumeType.Primary
+            };
+            //			volumeDescriptor.SetVolumeDescriptor( "EPURASU", 28, 26, 21, 22, rootDir, DateTime.Now, DateTime.Now.Subtract( TimeSpan.FromDays( 2 ) ), 8 );
 
-			// [ Sect 16 ] Primary volume descriptor
-			volumeDescriptor.VolumeDescriptorType = VolumeType.Primary;
-			//			volumeDescriptor.SetVolumeDescriptor( "EPURASU", 28, 26, 21, 22, rootDir, DateTime.Now, DateTime.Now.Subtract( TimeSpan.FromDays( 2 ) ), 8 );
-
-			volumeDescriptor.Write( writer );
+            volumeDescriptor.Write( writer );
 
 			// [ Sect 17 ] Suplementary volume descriptor (in care scriem cu unicode)
 			rootDir.SetDirectoryRecord( 23, IsoAlgorithm.SectorSize, DateTime.Now, true, "." );
@@ -160,12 +161,14 @@ namespace IsoCreator {
 
 			writer.Write( new byte[2048 - 34 - 34 - bytesWritten] );
 
-			// [ Sect 21 ] Pathtable pt little endian
+            // [ Sect 21 ] Pathtable pt little endian
 
-			// Root:
-			PathTableRecordWrapper record = new PathTableRecordWrapper();
-			record.Endian = Endian.LittleEndian;
-			record.SetPathTableRecord( 19, 1, "." );
+            // Root:
+            PathTableRecordWrapper record = new PathTableRecordWrapper
+            {
+                Endian = Endian.LittleEndian
+            };
+            record.SetPathTableRecord( 19, 1, "." );
 			bytesWritten = record.Write( writer );
 
 			// "Director":
@@ -174,12 +177,14 @@ namespace IsoCreator {
 
 			writer.Write( new byte[2048 - bytesWritten] );
 
-			// [ Sect 22 ] Pathtable pt big endian
+            // [ Sect 22 ] Pathtable pt big endian
 
-			// Root:
-			record = new PathTableRecordWrapper();
-			record.Endian = Endian.BigEndian;
-			record.SetPathTableRecord( 19, 1, "." );
+            // Root:
+            record = new PathTableRecordWrapper
+            {
+                Endian = Endian.BigEndian
+            };
+            record.SetPathTableRecord( 19, 1, "." );
 			record.Write( writer );
 
 			// "Director":
@@ -202,11 +207,13 @@ namespace IsoCreator {
 			rootDir.SetDirectoryRecord( 23, IsoAlgorithm.SectorSize, DateTime.Now, true, ".." );
 			rootDir.Write( writer );
 
-			// Director copil: "Director"
-			childDir = new DirectoryRecordWrapper( 24, IsoAlgorithm.SectorSize, DateTime.Now, true, "Directorul" );
-			//childDir.SetDirectoryRecord( 24, ISO9660.SectorSize, DateTime.Now, true, "Directorul" );
-			childDir.VolumeDescriptorType = VolumeType.Suplementary;
-			bytesWritten = childDir.Write( writer );
+            // Director copil: "Director"
+            childDir = new DirectoryRecordWrapper(24, IsoAlgorithm.SectorSize, DateTime.Now, true, "Directorul")
+            {
+                //childDir.SetDirectoryRecord( 24, ISO9660.SectorSize, DateTime.Now, true, "Directorul" );
+                VolumeDescriptorType = VolumeType.Suplementary
+            };
+            bytesWritten = childDir.Write( writer );
 
 			writer.Write( new byte[2048 - 34 - 34 - bytesWritten] );
 
@@ -220,13 +227,15 @@ namespace IsoCreator {
 
 			writer.Write( new byte[2048 - 34 - 34 - bytesWritten] );
 
-			// [ Sect 25 ] Pathtable pt little endian
+            // [ Sect 25 ] Pathtable pt little endian
 
-			// Root:
-			record = new PathTableRecordWrapper();
-			record.Endian = Endian.LittleEndian;
-			record.VolumeDescriptorType = VolumeType.Suplementary;
-			record.SetPathTableRecord( 23, 1, "." );
+            // Root:
+            record = new PathTableRecordWrapper
+            {
+                Endian = Endian.LittleEndian,
+                VolumeDescriptorType = VolumeType.Suplementary
+            };
+            record.SetPathTableRecord( 23, 1, "." );
 			bytesWritten = record.Write( writer );
 
 			// "Director":
@@ -235,13 +244,15 @@ namespace IsoCreator {
 
 			writer.Write( new byte[2048 - bytesWritten] );
 
-			// [ Sect 26 ] Pathtable pt big endian
+            // [ Sect 26 ] Pathtable pt big endian
 
-			// Root:
-			record = new PathTableRecordWrapper();
-			record.Endian = Endian.BigEndian;
-			record.VolumeDescriptorType = VolumeType.Suplementary;
-			record.SetPathTableRecord( 23, 1, "." );
+            // Root:
+            record = new PathTableRecordWrapper
+            {
+                Endian = Endian.BigEndian,
+                VolumeDescriptorType = VolumeType.Suplementary
+            };
+            record.SetPathTableRecord( 23, 1, "." );
 			record.Write( writer );
 
 			// "Director":
@@ -324,16 +335,20 @@ namespace IsoCreator {
 
 			// Create a Directory Record of the root and the volume descriptor.
 			DirectoryRecordWrapper rootRecord = new DirectoryRecordWrapper( root.Extent1, root.Size1, root.Date, root.IsDirectory, "." );
-			VolumeDescriptorWrapper volumeDescriptor = new VolumeDescriptorWrapper( volumeName, volumeSpaceSize, pathTableSize1, typeLPathTable1, typeMPathTable1, rootRecord, DateTime.Now, DateTime.Now, 8 );
-			volumeDescriptor.VolumeDescriptorType = VolumeType.Primary;
-			volumeDescriptor.Write( writer );
+            VolumeDescriptorWrapper volumeDescriptor = new VolumeDescriptorWrapper(volumeName, volumeSpaceSize, pathTableSize1, typeLPathTable1, typeMPathTable1, rootRecord, DateTime.Now, DateTime.Now, 8)
+            {
+                VolumeDescriptorType = VolumeType.Primary
+            };
+            volumeDescriptor.Write( writer );
 
 			// Suplementary volume descriptor:
 
 			rootRecord = new DirectoryRecordWrapper( root.Extent2, root.Size2, root.Date, root.IsDirectory, "." );
-			volumeDescriptor = new VolumeDescriptorWrapper( volumeName, volumeSpaceSize, pathTableSize2, typeLPathTable2, typeMPathTable2, rootRecord, DateTime.Now, DateTime.Now, 8 );
-			volumeDescriptor.VolumeDescriptorType = VolumeType.Suplementary;
-			volumeDescriptor.Write( writer );
+            volumeDescriptor = new VolumeDescriptorWrapper(volumeName, volumeSpaceSize, pathTableSize2, typeLPathTable2, typeMPathTable2, rootRecord, DateTime.Now, DateTime.Now, 8)
+            {
+                VolumeDescriptorType = VolumeType.Suplementary
+            };
+            volumeDescriptor.Write( writer );
 
 			// Volume descriptor set terminator:
 

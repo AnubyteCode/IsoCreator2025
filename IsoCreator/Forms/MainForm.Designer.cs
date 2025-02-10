@@ -78,7 +78,7 @@ namespace IsoCreator.Forms {
             this.buttonBrowseFolder.TabIndex = 4;
             this.buttonBrowseFolder.Text = "Browse...";
             this.buttonBrowseFolder.UseVisualStyleBackColor = true;
-            this.buttonBrowseFolder.Click += new System.EventHandler(this.buttonBrowseFolder_Click);
+            this.buttonBrowseFolder.Click += new System.EventHandler(this.ButtonBrowseFolder_Click);
             // 
             // buttonBrowseIso
             // 
@@ -89,7 +89,7 @@ namespace IsoCreator.Forms {
             this.buttonBrowseIso.TabIndex = 5;
             this.buttonBrowseIso.Text = "Browse...";
             this.buttonBrowseIso.UseVisualStyleBackColor = true;
-            this.buttonBrowseIso.Click += new System.EventHandler(this.buttonBrowseIso_Click);
+            this.buttonBrowseIso.Click += new System.EventHandler(this.ButtonBrowseIso_Click);
             // 
             // buttonStartAbort
             // 
@@ -100,7 +100,7 @@ namespace IsoCreator.Forms {
             this.buttonStartAbort.TabIndex = 6;
             this.buttonStartAbort.Text = "Start";
             this.buttonStartAbort.UseVisualStyleBackColor = true;
-            this.buttonStartAbort.Click += new System.EventHandler(this.buttonStartAbort_Click);
+            this.buttonStartAbort.Click += new System.EventHandler(this.ButtonStartAbort_Click);
             // 
             // label3
             // 
