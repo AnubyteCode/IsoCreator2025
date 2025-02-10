@@ -25,8 +25,8 @@ namespace IsoCreator.Forms {
 			InitializeComponent();
 			//
 			textBoxFolder.Text = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            textBoxIsoPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "bunny-wabbit.iso");
-			textBoxVolumeName.Text = "BUNNY-WABBIT";
+            textBoxIsoPath.Text = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "iso.iso");
+			textBoxVolumeName.Text = "iso";
 			//
 			m_creator = new IsoCreator();
 			m_creator.Progress += new ProgressDelegate( Creator_Progress );

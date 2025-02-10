@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "N:\\GitHub\\IsoCreator2025\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4A9EF7A9-C3D2-43D6-A2F6-9C97FB5AEEE3}|Export\\Export\\Export.csproj|n:\\github\\isocreator2025\\export\\export\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A9EF7A9-C3D2-43D6-A2F6-9C97FB5AEEE3}|Export\\Export\\Export.csproj|solutionrelative:export\\export\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|n:\\github\\isocreator2025\\isocreator\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|solutionrelative:isocreator\\properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|IsoCreator||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|N:\\GitHub\\IsoCreator2025\\isocreator\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|solutionrelative:isocreator\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|N:\\GitHub\\IsoCreator2025\\isocreator\\forms\\virtualisocreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|solutionrelative:isocreator\\forms\\virtualisocreator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|n:\\github\\isocreator2025\\isocreator\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|solutionrelative:isocreator\\forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|n:\\github\\isocreator2025\\isocreator\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}",
-      "RelativeMoniker": "D:0:0:{E7416B14-9744-4C69-9D46-C1BCA1FC5823}|IsoCreator\\IsoCreator.csproj|solutionrelative:isocreator\\properties\\resources.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|IsoCreator||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,52 +35,64 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "N:\\GitHub\\IsoCreator2025\\Export\\Export\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Export\\Export\\Properties\\AssemblyInfo.cs",
+              "ToolTip": "N:\\GitHub\\IsoCreator2025\\Export\\Export\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "Export\\Export\\Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-10T23:20:34.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "N:\\GitHub\\IsoCreator2025\\IsoCreator\\Properties\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "IsoCreator\\Properties\\AssemblyInfo.cs",
               "ToolTip": "N:\\GitHub\\IsoCreator2025\\IsoCreator\\Properties\\AssemblyInfo.cs",
               "RelativeToolTip": "IsoCreator\\Properties\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAACAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T23:07:42.314Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "MainForm.cs",
               "DocumentMoniker": "N:\\GitHub\\IsoCreator2025\\IsoCreator\\Forms\\MainForm.cs",
               "RelativeDocumentMoniker": "IsoCreator\\Forms\\MainForm.cs",
               "ToolTip": "N:\\GitHub\\IsoCreator2025\\IsoCreator\\Forms\\MainForm.cs",
               "RelativeToolTip": "IsoCreator\\Forms\\MainForm.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADgvxEAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAuwB4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T23:01:08.584Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "VirtualIsoCreator.cs",
               "DocumentMoniker": "N:\\GitHub\\IsoCreator2025\\IsoCreator\\Forms\\VirtualIsoCreator.cs",
               "RelativeDocumentMoniker": "IsoCreator\\Forms\\VirtualIsoCreator.cs",
               "ToolTip": "N:\\GitHub\\IsoCreator2025\\IsoCreator\\Forms\\VirtualIsoCreator.cs",
               "RelativeToolTip": "IsoCreator\\Forms\\VirtualIsoCreator.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAADgvw8AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAuwBoAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T22:57:34.838Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "IsoCreator",
               "DocumentMoniker": "N:\\GitHub\\IsoCreator2025\\IsoCreator\\IsoCreator.csproj",
               "RelativeDocumentMoniker": "IsoCreator\\IsoCreator.csproj",
               "ToolTip": "N:\\GitHub\\IsoCreator2025\\IsoCreator\\IsoCreator.csproj",
               "RelativeToolTip": "IsoCreator\\IsoCreator.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-02-10T22:54:40.443Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-10T22:54:40.443Z"
             }
           ]
         }

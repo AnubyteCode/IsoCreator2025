@@ -23,8 +23,8 @@ namespace IsoCreator.Forms {
 		public VirtualIsoCreator() {
 			InitializeComponent();
 			//
-			textBoxIsoPath.Text = @"C:\MyIso.iso";
-			textBoxVolumeName.Text = "BUNNY-WABBIT";
+			textBoxIsoPath.Text = @"C:\Users\Desktop\iso.iso";
+			textBoxVolumeName.Text = "iso";
 			//
 			m_creator = new IsoCreator();
 			m_creator.Progress += new ProgressDelegate( Creator_Progress );
