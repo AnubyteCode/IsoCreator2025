@@ -26,6 +26,8 @@
 *.unsuccessfulbuild
 *.vsidx
 ipch/
+vs/
+.vs/
 .vs
 [Oo]bj/
 [Bb]in
