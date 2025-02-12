@@ -66,6 +66,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModernFolderPicker.cs" />
+    <Compile Include="CustomMessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MicaHelper.cs" />
     <Compile Include="IsoWrappers\DirectoryRecordWrapper.cs" />
     <Compile Include="BER\CDCat\Export\ExportIso.cs" />
     <Compile Include="IsoCreator\DirectoryTree\FolderElementList.cs" />

@@ -176,7 +176,7 @@ namespace IsoCreator.Forms {
             // 
             this.labelStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelStatus.AutoSize = true;
-            this.labelStatus.ForeColor = System.Drawing.Color.DarkRed;
+            this.labelStatus.ForeColor = System.Drawing.Color.OrangeRed;
             this.labelStatus.Location = new System.Drawing.Point(261, 16);
             this.labelStatus.Name = "labelStatus";
             this.labelStatus.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -199,7 +199,7 @@ namespace IsoCreator.Forms {
             this.MaximumSize = new System.Drawing.Size(4067, 287);
             this.MinimumSize = new System.Drawing.Size(404, 287);
             this.Name = "MainForm";
-            this.Text = "ISO Creator";
+            this.Text = "ISO Creator 2025";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
