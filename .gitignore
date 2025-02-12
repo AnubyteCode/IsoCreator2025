@@ -26,6 +26,7 @@
 *.unsuccessfulbuild
 *.vsidx
 ipch/
+.vs
 [Oo]bj/
 [Bb]in
 [Dd]ebug*/
